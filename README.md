@@ -1,70 +1,44 @@
 # Web-Scrapping using Beautifulsoup
 
-Projek ini dikembangkan sebagai salah satu capstone project dari Algoritma Academy Data Analytics Specialization. Deliverables yang diharapkan dari projek ini adalah melakukan simple webscrapping untuk mendapatkan informasi. Untuk step by step guide, Bapak Ibu dipersilahkan untuk membuka git saya [Click here](https://github.com/t3981-h/Webscrapping-with-BeautifulSoup "Webscrapping with Beautiful Soup"). Kita juga akan memanfaatkan flask dashboard sederhana untuk menampilkan hasil scrap dan visualisasi kita.
+This project is about simple webscrapping from EXCHANGE-RATES.ORG to obtain information. I also use a simple dashboard flask to display our scrap and visualization results.
 
 ## Dependencies
 
 - beautifulSoup4
-- pandas
+- Pandas
 - flask
 - matplotlib
 
-Atau Bapak Ibu cukup menginstall requirements.txt dengan cara berikut
+Install the requirements.txt in the following way :
 
-```python
+`` python
 pip install -r requirements.txt
-```
-
-## Rubics
-
-- Environment preparation (2 points)
-- Finding the right key to scrap the data  & Extracting the right information (5 points)
-- Creating data frame & Data wrangling (5 points)
-- Creating a tidy python notebook as a report. (2 points)
-- Implement it on flask dashboard (2 points)
+``
 
 
 ## What You Need to Do
 
-* Silahkan mencoba melakukan scraping soal di bawah menggunakan `beautiful soup` di notebook Bapak/Ibu terlebih dahulu.
-* Bapak/Ibu dapat men-clone repo ini.
-* Silahkan buka notebook template pada capstone ini dan isi sesuai dengan arahan yang ada. Pastikan Bapak/Ibu memberikan analisa yang dibutuhkan pada notebook tersebut.
-* File di repo ini adalah skeleton yang dapat digunakan untuk membuat flask dashboard sederhana.
-* Silahkan isi di bagian yang masih kosong.
-* Isi fungsi `scrap` dengan proses scraping yang sudah Bapak/Ibu lakukan di notebook. 
+* I scrape using `beautiful soup` in my jupyter notebook first.
+* Please open the notebook template in this capstone and fill in according to the directions. I have also provided the analysis needed on the notebook.
+* The file in this repository is a file that can be used to create a simple dashboard flask.
 
-```python
-table = soup.find(___)
-tr = table.find_all(___)
-```
+`` python
+table = soup.find('table', attrs={'class':'table table-striped table-hover table-hover-solid-row table-simple history-data'})
+tr = table.find_all('tr')
+``
 
-* Isi bagian ini untuk menyimpan hasil scrap yang Bapak/Ibu buat menjadi sebuah dataframe.
+* Use the code below to save the scrap that you made into a dataframe.
 
-```python
-df = pd.DataFrame(name of your tupple, columns = (name of the columns))
-```
+`` python
+df = pd.DataFrame(temp, columns = ('date','day','rate','desc'))
+``
 
-* Terakhir Bapak/Ibu dapat menggunakan fungsi `scrap` dengan cara mengisi bagian berikut dengan link web yang Bapak/Ibu scrap.
 
-```python
-df = scrap(___) #insert url here
-```
-
-* Bapak/Ibu juga dapat bermain dengan UI nya pada `index.html` yang dimana Bapak/Ibu dapat mengikuti comment yang ada untuk mengetahui bagian mana yang dapat diubah. 
+* You can also play with the UI in `index.html` where you can follow the comments to find out which parts can be changed.
 
 ### The Final Mission
 
-Pada captsone kali ini, Bapak Ibu bisa memilih salah satu soal ini untuk dikerjakan.
+1. Data on the exchange rate of US Dollar to SGD from `https://www.exchange-rates.org/history/SGD/USD/T`
 
-1. Data kurs US Dollar ke rupiah dari `https://www.exchange-rates.org/history/IDR/USD/T`
-
-    * Dari halaman tersebut carilah `harga harian`, dan `tanggal`
-    * Bualah plot pergerakan kurs USD 
-    
-2. Data film yang rilis di tahun 2019 dari `imdb.com/search/title/?release_date=2019-01-01,2019-12-31`
-
-    * Dari Halaman tersebut carilah `judul` , `imdb rating` , `metascore`, dan `votes`
-    * Buatlah plot dari 7 film paling populer di tahun 2019.
-
-
-Happy learning! 
+    * From this page look for `date`, `day of the week`, `daily rate`, and `description`
+    * Create a plot of the movement of the USD exchange rate
