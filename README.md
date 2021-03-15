@@ -1,6 +1,6 @@
 # Web-Scrapping using Beautifulsoup
 
-This project is about simple webscrapping from EXCHANGE-RATES.ORG to obtain information. I also use a simple dashboard flask to display our scrap and visualization results.
+This project is about simple webscrapping from exchange-rates.org to obtain information. I also use a simple dashboard flask to display our scrap and visualization results.
 
 ## Dependencies
 
