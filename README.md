@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ``
 
 
-## What You Need to Do
+## Steps of my Web Scrapping
 
 * I scrape using `beautiful soup` in my jupyter notebook first.
 * Please open the notebook template in this capstone and fill in according to the directions. I have also provided the analysis needed on the notebook.
@@ -36,7 +36,7 @@ df = pd.DataFrame(temp, columns = ('date','day','rate','desc'))
 
 * You can also play with the UI in `index.html` where you can follow the comments to find out which parts can be changed.
 
-### The Final Mission
+### Objectives
 
 1. Data on the exchange rate of US Dollar to SGD from `https://www.exchange-rates.org/history/SGD/USD/T`
 
