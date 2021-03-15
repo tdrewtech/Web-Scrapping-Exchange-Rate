@@ -38,7 +38,7 @@ df = pd.DataFrame(temp, columns = ('date','day','rate','desc'))
 
 ### Objectives
 
-1. Data on the exchange rate of US Dollar to SGD from `https://www.exchange-rates.org/history/SGD/USD/T`
+Data on the exchange rate of US Dollar to SGD from `https://www.exchange-rates.org/history/SGD/USD/T`
 
     * From this page look for `date`, `day of the week`, `daily rate`, and `description`
     * Create a plot of the movement of the USD exchange rate
